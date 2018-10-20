@@ -1,11 +1,16 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react"
+import logo from "./logo.svg"
+import "./App.css"
+import { BrowserRouter, Route, Link, Switch } from "react-router-dom"
+import { Helmet } from "react-helmet"
 
 class App extends Component {
   render() {
     return (
       <div className="App">
+        <Helmet>
+          <title>Main</title>
+        </Helmet>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
@@ -19,10 +24,31 @@ class App extends Component {
           >
             Learn React
           </a>
+          <Link to="/sub">Sub</Link>
         </header>
       </div>
-    );
+    )
   }
 }
+const Sub = () => {
+  return (
+    <div>
+      <Helmet>
+        <title>Sub</title>
+      </Helmet>
+      <div>sub</div>
+    </div>
+  )
+}
+const Main = () => {
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route path="/sub" component={Sub} />
+        <Route component={App} />
+      </Switch>
+    </BrowserRouter>
+  )
+}
 
-export default App;
+export default Main
