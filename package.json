@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "core-js": "^2.5.7",
     "raf": "^3.4.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
@@ -14,7 +15,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build & react-snapshot",
+    "build": "react-scripts build ",
     "test": "react-scripts test",
     "deploy": "netlify deploy --prod",
     "eject": "react-scripts eject"
