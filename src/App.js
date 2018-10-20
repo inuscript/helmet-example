@@ -4,6 +4,9 @@ import "./App.css"
 import { BrowserRouter, Route, Link, Switch } from "react-router-dom"
 import { Helmet } from "react-helmet"
 
+const Button = () => {
+  return <button onClick={(e) => console.log(e)} />
+}
 class App extends Component {
   render() {
     return (
@@ -37,6 +40,7 @@ const Sub = () => {
         <title>Sub</title>
       </Helmet>
       <div>sub</div>
+      <Button />
     </div>
   )
 }
