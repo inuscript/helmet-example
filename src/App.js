@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Link, Switch } from "react-router-dom"
 import { Helmet } from "react-helmet"
 
 const Button = () => {
-  return <button onClick={(e) => console.log(e)} />
+  return <button onClick={(e) => console.log("button", e)}>Click</button>
 }
 class App extends Component {
   render() {
